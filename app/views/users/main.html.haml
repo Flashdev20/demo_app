@@ -1,0 +1,20 @@
+%h3 Usuarios:
+%table
+  %tbody
+    %tr
+      %th ID
+      %th Name
+      %th Age
+      %th Address
+      %th Status
+      %th Bio
+  - @users.each do |user|
+    %tr
+      %td= user.id
+      %td= user.name
+      %td= user.age
+      %td= user.address
+      %td= user.status
+      %td= user.bio
+      %td= link_to "Delete", delete_user_path(user.id)
+= button_to"New", new_user_path
