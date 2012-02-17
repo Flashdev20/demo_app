@@ -16,5 +16,6 @@
       %td= user.address
       %td= user.status
       %td= user.bio
-      %td= link_to "Delete", delete_user_path(user.id)
+      %td= link_to "Edit", edit_user_path(user.id)
+      %td= link_to "Delete", user, method: :delete
 = button_to"New", new_user_path
